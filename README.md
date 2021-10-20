@@ -22,3 +22,9 @@ npm test
 
 You should see the test fail as you will need to copy in the new MD5 hash of the file
 and with that you should also bump the version number.
+
+## Limitations
+
+In practise, a typical implementation of Redux might have scattered type definitions across multiple files. In this case, the test should be updated to reflect which particular files the Redux reducer depends upon.
+
+Importing a file into your `types.ts` file will cause an initial change in the hash but subsequent changes to that imported file will no longer flag as requiring a version bump! To get around this we again need to explicitly include these dependencies.
