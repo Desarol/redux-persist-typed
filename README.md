@@ -16,7 +16,7 @@ You should see that the test passes and says it will check the version number is
 Now update the `types.ts` file and run the test again.
 
 ```
-echo "type NewType { stuff: string }" >> types.ts
+echo "type NewType = { stuff: string }" >> types.ts
 npm test
 ```
 
