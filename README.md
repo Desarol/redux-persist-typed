@@ -12,7 +12,13 @@ npm test
 ```
 
 You should see that the test passes and says it will check the version number is bumped every time the type for the RootReducer is changed.
+
 Now update the `types.ts` file and run the test again.
+
+```
+echo "type NewType { stuff: string }" >> types.ts
+npm test
+```
 
 You should see the test fail as you will need to copy in the new MD5 hash of the file
 and with that you should also bump the version number.
